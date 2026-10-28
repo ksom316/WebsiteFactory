@@ -1,0 +1,14 @@
+# Test files are never real API routes, but Vercel's zero-config /api routing
+# treats every non-underscore-prefixed file under api/ as its own Serverless
+# Function — without this, each api/**/*.test.ts sits next to its route and gets
+# counted as a separate function too, pushing the deployment over the Hobby
+# plan's 12-function limit. Excluding them here keeps only the real 10 route
+# files as functions; api/_lib/**/*.test.ts files were already excluded by
+# Vercel's own underscore-prefix convention.
+**/*.test.ts
+**/*.test.tsx
+
+# Not needed in the deployed app or its build.
+e2e
+playwright.config.ts
+playwright-artifacts

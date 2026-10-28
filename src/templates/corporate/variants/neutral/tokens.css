@@ -1,0 +1,41 @@
+/*
+ * Neutral ("Willow Creek") variant tokens. Scoped under .wf-corporate--neutral for the
+ * same reason as the premium variant's tokens.css — see that file's header comment.
+ */
+.wf-corporate--neutral {
+  --site-font-display: 'Figtree', ui-sans-serif, system-ui, sans-serif;
+  --site-font-body: 'Figtree', ui-sans-serif, system-ui, sans-serif;
+
+  --site-bg: #f2ede6;
+  --site-surface: #ffffff;
+  --site-surface-raised: #fbf8f3;
+  --site-border: #e1d8c9;
+  --site-text: #2a2621;
+  --site-text-muted: #6b6354;
+  --site-text-faint: #9a9182;
+  --site-accent: #2f5d54;
+  --site-accent-strong: #244a43;
+  --site-accent-contrast: #f6fbf9;
+  --site-secondary: #c98a3e;
+
+  --site-placeholder-gradient: linear-gradient(135deg, #e1d8c9, #cfc3ac);
+  --site-placeholder-text: #6b6354;
+
+  color-scheme: light;
+  background-color: var(--site-bg);
+  color: var(--site-text);
+  font-family: var(--site-font-body);
+}
+
+.wf-corporate--neutral :focus-visible {
+  outline: 2px solid var(--site-accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wf-corporate--neutral * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

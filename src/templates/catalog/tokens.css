@@ -1,0 +1,47 @@
+/*
+ * Catalog family design tokens — scoped under .wf-catalog so this file can be bundled
+ * alongside the corporate, restaurant, real-estate, and portfolio families' own
+ * tokens.css files without any selector collision (see README.md's Template families
+ * section for the convention every family follows).
+ *
+ * Distinct from the other four families: a polished independent-boutique register —
+ * warm linen background, deep charcoal ink, and a dusty-rose accent with a muted sage
+ * secondary — paired with an editorial serif display face and a clean grotesk body face.
+ */
+.wf-catalog {
+  --site-font-display: 'Playfair Display', 'Georgia', serif;
+  --site-font-body: 'Manrope', ui-sans-serif, system-ui, sans-serif;
+
+  --site-bg: #f8f6f2;
+  --site-surface: #ffffff;
+  --site-surface-raised: #efe9e2;
+  --site-border: #e2d9cd;
+  --site-text: #201f1d;
+  --site-text-muted: #5a554c;
+  --site-text-faint: #938c7f;
+  --site-accent: #b4697a;
+  --site-accent-strong: #934f5e;
+  --site-accent-contrast: #fdf7f8;
+  --site-secondary: #6b7a5e;
+
+  --site-placeholder-gradient: linear-gradient(135deg, #e2d9cd, #cabfab);
+  --site-placeholder-text: #5a554c;
+
+  color-scheme: light;
+  background-color: var(--site-bg);
+  color: var(--site-text);
+  font-family: var(--site-font-body);
+}
+
+.wf-catalog :focus-visible {
+  outline: 2px solid var(--site-accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wf-catalog * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

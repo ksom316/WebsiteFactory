@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500;0,9..144,340&family=Archivo:wght@400;500;600;700&family=Figtree:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!--
+      Fonts above power two things: Source Sans 3 (interface/body) and Source Serif 4
+      (page titles and other editorial moments) are the Website Factory dashboard's own
+      typefaces (src/index.css's --font-sans/--font-serif tokens). Fraunces/Archivo and
+      Figtree belong to the corporate website templates (src/templates/corporate) —
+      Fraunces+Archivo for the "premium" variant, Figtree for the "neutral" variant.
+      Template typography is intentionally kept out of the dashboard's @theme tokens so
+      client-site branding never leaks into factory UI.
+    -->
+    <title>Website Factory</title>
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('wf-theme')
+          var pref = stored === 'light' || stored === 'dark' || stored === 'system' ? stored : 'system'
+          var resolved =
+            pref === 'system'
+              ? window.matchMedia('(prefers-color-scheme: dark)').matches
+                ? 'dark'
+                : 'light'
+              : pref
+          document.documentElement.setAttribute('data-theme', resolved)
+          document.documentElement.style.colorScheme = resolved
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'light')
+        }
+      })()
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

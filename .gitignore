@@ -1,0 +1,40 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Playwright-generated artifacts (reports, screenshots, traces, results) — never the
+# e2e/ test sources or playwright.config.ts themselves.
+/playwright-artifacts/
+/test-results/
+/blob-report/
+/playwright-report/
+/playwright/.cache/
+
+# Secrets — never commit real credentials or connection strings.
+.env
+.env.*
+!.env.example
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+.vercel
+.env*

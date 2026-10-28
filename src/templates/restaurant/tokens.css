@@ -1,0 +1,46 @@
+/*
+ * Restaurant family design tokens — scoped under .wf-restaurant so this file can be
+ * bundled alongside the corporate variants' own tokens.css files without any selector
+ * collision (see src/templates/corporate/variants for the same convention).
+ *
+ * Distinct from both corporate variants: a warm editorial food-and-hospitality palette
+ * (terracotta + deep olive on a warm ivory ground) with a serif display face for
+ * headings, paired with a humanist sans for body copy.
+ */
+.wf-restaurant {
+  --site-font-display: 'Cormorant Garamond', 'Georgia', serif;
+  --site-font-body: 'Jost', ui-sans-serif, system-ui, sans-serif;
+
+  --site-bg: #faf4ea;
+  --site-surface: #ffffff;
+  --site-surface-raised: #f3e9d8;
+  --site-border: #e3d4bb;
+  --site-text: #2b241b;
+  --site-text-muted: #6f6150;
+  --site-text-faint: #a3927a;
+  --site-accent: #a8512f;
+  --site-accent-strong: #823d22;
+  --site-accent-contrast: #fff8f0;
+  --site-secondary: #4b5a3a;
+
+  --site-placeholder-gradient: linear-gradient(135deg, #e3d4bb, #c9b38f);
+  --site-placeholder-text: #6f6150;
+
+  color-scheme: light;
+  background-color: var(--site-bg);
+  color: var(--site-text);
+  font-family: var(--site-font-body);
+}
+
+.wf-restaurant :focus-visible {
+  outline: 2px solid var(--site-accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wf-restaurant * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

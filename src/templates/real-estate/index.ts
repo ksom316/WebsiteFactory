@@ -1,0 +1,7 @@
+export { RealEstateTemplate } from './RealEstateTemplate'
+export { realEstateConfigSchema, parseRealEstateConfig, DEFAULT_REAL_ESTATE_CONFIG, PROPERTY_TYPES, TRANSACTION_TYPES } from './schema'
+export type { RealEstateConfig, Property } from './schema'
+export { REAL_ESTATE_TEMPLATE_ID } from './registry'
+export { meridianRealtyConfig } from './sample-data/meridianRealty'
+export { REAL_ESTATE_SAMPLE_PROFILES, getRealEstateSampleProfile } from './sample-data'
+export type { RealEstateSampleProfile } from './sample-data'

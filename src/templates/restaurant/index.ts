@@ -1,0 +1,7 @@
+export { RestaurantTemplate } from './RestaurantTemplate'
+export { restaurantConfigSchema, parseRestaurantConfig, DEFAULT_RESTAURANT_CONFIG } from './schema'
+export type { RestaurantConfig } from './schema'
+export { RESTAURANT_TEMPLATE_ID } from './registry'
+export { gildedFigConfig } from './sample-data/gildedFig'
+export { RESTAURANT_SAMPLE_PROFILES, getRestaurantSampleProfile } from './sample-data'
+export type { RestaurantSampleProfile } from './sample-data'

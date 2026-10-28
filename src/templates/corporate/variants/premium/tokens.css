@@ -1,0 +1,42 @@
+/*
+ * Premium ("Fathom") variant tokens. Scoped entirely under .wf-corporate--premium so
+ * they never touch the Website Factory dashboard's own --color-* tokens in
+ * src/index.css, and are deliberately NOT tied to [data-theme] — a client site has one
+ * fixed brand look regardless of which theme the factory operator prefers.
+ */
+.wf-corporate--premium {
+  --site-font-display: 'Fraunces', ui-serif, Georgia, serif;
+  --site-font-body: 'Archivo', ui-sans-serif, system-ui, sans-serif;
+
+  --site-bg: #121826;
+  --site-surface: #19212f;
+  --site-surface-raised: #1f2938;
+  --site-border: #2c3747;
+  --site-text: #f1eee6;
+  --site-text-muted: #aab3c2;
+  --site-text-faint: #6d7889;
+  --site-accent: #c08a3e;
+  --site-accent-strong: #d9a65d;
+  --site-accent-contrast: #15110a;
+  --site-secondary: #4c6b7a;
+
+  --site-placeholder-gradient: linear-gradient(135deg, #1f2938, #2c3747);
+  --site-placeholder-text: #6d7889;
+
+  color-scheme: dark;
+  background-color: var(--site-bg);
+  color: var(--site-text);
+  font-family: var(--site-font-body);
+}
+
+.wf-corporate--premium :focus-visible {
+  outline: 2px solid var(--site-accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wf-corporate--premium * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
